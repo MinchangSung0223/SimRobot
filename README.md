@@ -1,5 +1,5 @@
 # SimRobot
-# LieGroupRoboticsControl
+
 ```bash
    sudo apt-get install build-essential cmake
    sudo apt-get install libeigen3-dev liburdfdom-dev
