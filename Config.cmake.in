@@ -1,0 +1,5 @@
+# SimRobotConfig.cmake.in
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/SimRobotTargets.cmake")
+
