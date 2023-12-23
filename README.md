@@ -3,6 +3,18 @@
 ```bash
    sudo apt-get install build-essential cmake
    sudo apt-get install libeigen3-dev liburdfdom-dev
+   sudo apt-get install python3-dev
+```
+# Bullet3 install
+```bash
+   git clone https://github.com/bulletphysics/bullet3.git
+   cd bullet3
+   export BULLET_DIR=$PWD
+   sudo ./build_cmake_pybullet_double.sh
+   cd build_cmake
+   sudo make install
+   cd /opt
+   sudo ln -s ${BULLET_DIR} .
 ```
 
 # robotpkg install
