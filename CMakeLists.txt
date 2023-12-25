@@ -2,9 +2,8 @@ cmake_minimum_required(VERSION 3.0)
 project(SimRobot LANGUAGES CXX)
 
 find_package(Bullet)
-find_package(LR REQUIRED)
-find_package(pinocchio REQUIRED)
 find_package(Eigen3 3.0 REQUIRED)
+
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, options are: Debug | Release | RelWithDebInfo | MinSizeRel" FORCE)
@@ -14,7 +13,7 @@ file(GLOB SOURCE_FILES "*.cpp" "*.c" "*.h")
 
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 target_include_directories(${PROJECT_NAME} PUBLIC ${BULLET_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen LR::LR)
+target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen  )
 target_compile_definitions(${PROJECT_NAME} PUBLIC -DBT_USE_DOUBLE_PRECISION)
 
 # 라이브러리와 헤더 파일 설치

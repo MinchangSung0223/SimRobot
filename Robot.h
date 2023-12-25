@@ -6,7 +6,7 @@
 #include "LinearMath/btQuaternion.h"
 #include "Bullet3Common/b3HashMap.h"
 
-#include "LR/type.h"
+#include <LR/type.h>
 #include <Eigen/Dense>
 #include <vector>
 using namespace Eigen;
